@@ -26,7 +26,7 @@ class ProductsService {
                }
                guard let data = data, error == nil else { return }
                do {
-                   let decodedObject = try JSONDecoder().decode([CategoryData].self, from: data)
+                   let decodedObject = try JSONDecoder().decode([DataModel].self, from: data)
                }
                catch {
                    debugPrint("Error Decoding Data")

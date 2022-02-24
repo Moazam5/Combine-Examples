@@ -1,5 +1,5 @@
 //
-//  ProductsDataModel.swift
+//  DataModel.swift
 //  ANF Code Test
 //
 //  Created by Moazam Mir on 2/15/22.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CategoryData: Codable {
+struct DataModel: Codable {
     var title: String
     var backgroundImage: String
     var content: [Content]?
