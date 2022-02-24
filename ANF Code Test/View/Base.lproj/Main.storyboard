@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PyX-fH-1PW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore Card Table View Controller-->
+        <scene sceneID="MX6-yV-Ik2">
+            <objects>
+                <tableViewController id="PyX-fH-1PW" customClass="ANFExploreCardTableViewController" customModule="ANF_Code_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UJA-3f-Li9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exploreContentCell" rowHeight="464" id="VkP-n6-9sM" customClass="ItemsTableViewCell" customModule="ANF_Code_Test" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="464"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VkP-n6-9sM" id="cAC-C2-Lla">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esK-G0-zaO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anf-US-20160415-app-men-essentials" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-hF-4eU" userLabel="imageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="364"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-PB-wUK">
+                                                    <rect key="frame" x="123" y="374" width="169" height="40"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="79j-Gj-h9K"/>
+                                                        <constraint firstAttribute="width" constant="200" id="ROL-Us-Qwr"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="topButton:" destination="VkP-n6-9sM" eventType="touchUpInside" id="otS-kH-j5n"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jKa-PB-wUK" secondAttribute="trailing" constant="122" id="1Yo-NQ-biH"/>
+                                                <constraint firstItem="mNz-hF-4eU" firstAttribute="leading" secondItem="esK-G0-zaO" secondAttribute="leading" id="BQd-fB-xos"/>
+                                                <constraint firstItem="jKa-PB-wUK" firstAttribute="leading" secondItem="esK-G0-zaO" secondAttribute="leading" constant="123" id="CWh-0v-78Z"/>
+                                                <constraint firstItem="mNz-hF-4eU" firstAttribute="top" secondItem="esK-G0-zaO" secondAttribute="top" id="R6c-X5-sUD"/>
+                                                <constraint firstAttribute="trailing" secondItem="mNz-hF-4eU" secondAttribute="trailing" id="c0b-8f-oDz"/>
+                                                <constraint firstAttribute="bottom" secondItem="jKa-PB-wUK" secondAttribute="bottom" constant="50" id="pPA-22-ekk"/>
+                                                <constraint firstItem="jKa-PB-wUK" firstAttribute="top" secondItem="mNz-hF-4eU" secondAttribute="bottom" constant="10" id="y9e-dO-8ya"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="esK-G0-zaO" secondAttribute="trailing" id="0bW-hf-kFy"/>
+                                        <constraint firstItem="esK-G0-zaO" firstAttribute="top" secondItem="cAC-C2-Lla" secondAttribute="top" id="3u9-KH-4ss"/>
+                                        <constraint firstItem="esK-G0-zaO" firstAttribute="leading" secondItem="cAC-C2-Lla" secondAttribute="leading" id="DxK-yM-NRP"/>
+                                        <constraint firstAttribute="bottom" secondItem="esK-G0-zaO" secondAttribute="bottom" id="My8-yl-tL0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backgroundImage" destination="mNz-hF-4eU" id="2CZ-mz-Ezh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PyX-fH-1PW" id="K0h-VI-aqU"/>
+                            <outlet property="delegate" destination="PyX-fH-1PW" id="atF-bM-8Y8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38S-jw-QXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.1449275362319" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="anf-US-20160415-app-men-essentials" width="1000" height="562"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
