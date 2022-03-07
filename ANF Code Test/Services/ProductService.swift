@@ -6,10 +6,31 @@
 //
 
 import Foundation
+import Combine
 
 class ProductsService {
     static let shared = ProductsService()
+    private var subscribers = Set<AnyCancellable>()
 
+    /// Networking with Combine
+    func fetchData<T: Decodable>(url: URL, completion: @escaping (Result<[T], Error>) -> Void) {
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map{ $0.data }
+            .decode(type: [T].self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { resultCompletion in
+                switch resultCompletion {
+                case .failure(let error):
+                    completion(.failure(error))
+                case .finished:
+                    break
+                }
+            }, receiveValue: { (resultArray) in
+                completion(.success(resultArray))
+            })
+            .store(in: &subscribers)
+    }
+
+    /// Networking with URL Session
     func sendRequest(completionHandler: @escaping ([DataModel]) -> Void)  {
 
            let sessionConfig = URLSessionConfiguration.default
@@ -38,4 +59,15 @@ class ProductsService {
            session.finishTasksAndInvalidate()
        }
 
+}
+
+
+enum Endpoint {
+    case homeScreenInfoFetch
+    var url: String {
+        switch self {
+        case .homeScreenInfoFetch:
+            return "https://www.abercrombie.com/anf/nativeapp/qa/codetest/codeTest_exploreData.json"
+        }
+    }
 }

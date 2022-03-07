@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct DataModel: Codable {
+struct DataModel: Decodable {
     var title: String
     var backgroundImage: String
     var content: [Content]?
@@ -18,7 +18,7 @@ struct DataModel: Codable {
 
 }
 
-struct Content: Codable {
+struct Content: Decodable {
     let target: String
     let title: String
     let elementType: String?

@@ -99,10 +99,10 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				5934C35227C7F74D002F58B2 /* Services */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
 				3E727EDB2672708B006C11AC /* Assets.xcassets */,
+				5934C35227C7F74D002F58B2 /* Services */,
 				59DDBA2927BB99C5008F22FF /* Model */,
 				5934C34F27C77204002F58B2 /* View Model */,
 				5934C34E27C771F2002F58B2 /* View */,
