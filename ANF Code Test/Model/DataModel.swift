@@ -16,7 +16,6 @@ struct DataModel: Codable {
     var topDescription: String?
     var bottomDescription: String?
 
-
 }
 
 struct Content: Codable {

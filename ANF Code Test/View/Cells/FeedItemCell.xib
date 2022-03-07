@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="508" id="KGk-i7-Jjw" customClass="FeedItemCell" customModule="ANF_Code_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="486" height="508"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="486" height="508"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-nc-jml" userLabel="MiddleStackView">
+                        <rect key="frame" x="0.0" y="338" width="486" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Top Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-bU-5d9" userLabel="topDescriptionLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="486" height="69.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuT-OS-hB1" userLabel="titleLabel">
+                                <rect key="frame" x="0.0" y="69.5" width="486" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-A8-Emy" userLabel="promoMessageLabel">
+                                <rect key="frame" x="0.0" y="90" width="486" height="15"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRP-O2-MEf" userLabel="bottomDescriptionLabel">
+                                <rect key="frame" x="0.0" y="105" width="486" height="15"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="8pK-qA-2dQ"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-MT-SKh" userLabel="BottomStackView">
+                        <rect key="frame" x="0.0" y="458" width="486" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TaN-d5-eYw" userLabel="height = 50"/>
+                        </constraints>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anf-20160527-app-m-shirts" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3O-Gb-xT2">
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="338"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SG3-MT-SKh" firstAttribute="top" secondItem="MsW-nc-jml" secondAttribute="bottom" id="2Lp-45-0JR"/>
+                    <constraint firstAttribute="bottom" secondItem="SG3-MT-SKh" secondAttribute="bottom" id="5Rv-7O-Agh"/>
+                    <constraint firstItem="MsW-nc-jml" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6Pl-fw-IEI"/>
+                    <constraint firstAttribute="trailing" secondItem="I3O-Gb-xT2" secondAttribute="trailing" id="8M9-g6-012"/>
+                    <constraint firstItem="I3O-Gb-xT2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rpd-aR-yVA"/>
+                    <constraint firstAttribute="trailing" secondItem="SG3-MT-SKh" secondAttribute="trailing" id="XJc-r6-03b"/>
+                    <constraint firstItem="SG3-MT-SKh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jhq-DS-0ip"/>
+                    <constraint firstItem="MsW-nc-jml" firstAttribute="top" secondItem="I3O-Gb-xT2" secondAttribute="bottom" id="nv6-lF-K4j"/>
+                    <constraint firstItem="I3O-Gb-xT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pm5-1R-mHl"/>
+                    <constraint firstAttribute="trailing" secondItem="MsW-nc-jml" secondAttribute="trailing" id="xjL-Rr-aHZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImage" destination="I3O-Gb-xT2" id="gMG-pJ-mxm"/>
+                <outlet property="bottomDescription" destination="tRP-O2-MEf" id="Zzs-lT-mGy"/>
+                <outlet property="bottomStackView" destination="SG3-MT-SKh" id="TpT-8D-AZw"/>
+                <outlet property="promoMessage" destination="9X3-A8-Emy" id="q0X-13-qSV"/>
+                <outlet property="title" destination="HuT-OS-hB1" id="WQk-Ka-PKv"/>
+                <outlet property="topDescription" destination="xhh-bU-5d9" id="ADe-YB-gXR"/>
+            </connections>
+            <point key="canvasLocation" x="8.6956521739130448" y="300.66964285714283"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="anf-20160527-app-m-shirts" width="1000" height="559"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

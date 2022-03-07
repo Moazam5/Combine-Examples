@@ -10,7 +10,7 @@ import Foundation
 class ProductsService {
     static let shared = ProductsService()
 
-    func sendRequest() {
+    func sendRequest(completionHandler: @escaping ([DataModel]) -> Void)  {
 
            let sessionConfig = URLSessionConfiguration.default
            let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -27,6 +27,7 @@ class ProductsService {
                guard let data = data, error == nil else { return }
                do {
                    let decodedObject = try JSONDecoder().decode([DataModel].self, from: data)
+                   completionHandler(decodedObject)
                }
                catch {
                    debugPrint("Error Decoding Data")

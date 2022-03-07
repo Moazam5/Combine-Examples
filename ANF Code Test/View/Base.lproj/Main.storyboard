@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19529"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,48 +24,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esK-G0-zaO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-11-jVL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="582.5"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anf-US-20160415-app-men-essentials" translatesAutoresizingMaskIntoConstraints="NO" id="mNz-hF-4eU" userLabel="imageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="364"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anf-US-20160415-app-women-jeans" translatesAutoresizingMaskIntoConstraints="NO" id="Vly-hO-yXz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="562"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-PB-wUK">
-                                                    <rect key="frame" x="123" y="374" width="169" height="40"/>
-                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="79j-Gj-h9K"/>
-                                                        <constraint firstAttribute="width" constant="200" id="ROL-Us-Qwr"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                    <connections>
-                                                        <action selector="topButton:" destination="VkP-n6-9sM" eventType="touchUpInside" id="otS-kH-j5n"/>
-                                                    </connections>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHI-kc-6zT">
+                                                    <rect key="frame" x="0.0" y="562" width="414" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="jKa-PB-wUK" secondAttribute="trailing" constant="122" id="1Yo-NQ-biH"/>
-                                                <constraint firstItem="mNz-hF-4eU" firstAttribute="leading" secondItem="esK-G0-zaO" secondAttribute="leading" id="BQd-fB-xos"/>
-                                                <constraint firstItem="jKa-PB-wUK" firstAttribute="leading" secondItem="esK-G0-zaO" secondAttribute="leading" constant="123" id="CWh-0v-78Z"/>
-                                                <constraint firstItem="mNz-hF-4eU" firstAttribute="top" secondItem="esK-G0-zaO" secondAttribute="top" id="R6c-X5-sUD"/>
-                                                <constraint firstAttribute="trailing" secondItem="mNz-hF-4eU" secondAttribute="trailing" id="c0b-8f-oDz"/>
-                                                <constraint firstAttribute="bottom" secondItem="jKa-PB-wUK" secondAttribute="bottom" constant="50" id="pPA-22-ekk"/>
-                                                <constraint firstItem="jKa-PB-wUK" firstAttribute="top" secondItem="mNz-hF-4eU" secondAttribute="bottom" constant="10" id="y9e-dO-8ya"/>
-                                            </constraints>
-                                        </view>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="esK-G0-zaO" secondAttribute="trailing" id="0bW-hf-kFy"/>
-                                        <constraint firstItem="esK-G0-zaO" firstAttribute="top" secondItem="cAC-C2-Lla" secondAttribute="top" id="3u9-KH-4ss"/>
-                                        <constraint firstItem="esK-G0-zaO" firstAttribute="leading" secondItem="cAC-C2-Lla" secondAttribute="leading" id="DxK-yM-NRP"/>
-                                        <constraint firstAttribute="bottom" secondItem="esK-G0-zaO" secondAttribute="bottom" id="My8-yl-tL0"/>
+                                        <constraint firstItem="uQd-11-jVL" firstAttribute="top" secondItem="cAC-C2-Lla" secondAttribute="top" id="IqB-QU-73k"/>
+                                        <constraint firstAttribute="trailing" secondItem="uQd-11-jVL" secondAttribute="trailing" id="Xk5-Jv-F5M"/>
+                                        <constraint firstItem="uQd-11-jVL" firstAttribute="leading" secondItem="cAC-C2-Lla" secondAttribute="leading" id="uGh-9O-4HK"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="backgroundImage" destination="mNz-hF-4eU" id="2CZ-mz-Ezh"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,12 +61,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="anf-US-20160415-app-men-essentials" width="1000" height="562"/>
+        <image name="anf-US-20160415-app-women-jeans" width="1000" height="562"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
