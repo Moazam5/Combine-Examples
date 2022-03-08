@@ -19,7 +19,7 @@ class FeedItemCell: UITableViewCell {
     @IBOutlet weak var buttonOne: UIButton!
 
     static func nib() -> UINib {
-        return UINib(nibName: "FeedItemCell", bundle: nil)
+        return UINib(nibName: Constants.feedItemCellIdentifier, bundle: nil)
     }
 
     override func awakeFromNib() {

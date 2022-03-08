@@ -14,9 +14,7 @@ class ANFExploreCardTableViewController: UITableViewController {
     private var subscriber: AnyCancellable?
 
     override func viewDidLoad() {
-
         tableView.register(FeedItemCell.nib(), forCellReuseIdentifier: Constants.feedItemCellIdentifier)
-      //  tableView.rowHeight = 400
         setupViewModel()
         fetchData()
         observeViewModel()
