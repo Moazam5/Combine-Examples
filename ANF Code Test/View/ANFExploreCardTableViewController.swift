@@ -16,11 +16,10 @@ class ANFExploreCardTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         tableView.register(FeedItemCell.nib(), forCellReuseIdentifier: Constants.feedItemCellIdentifier)
-        tableView.rowHeight = 400
-
+      //  tableView.rowHeight = 400
+        setupViewModel()
         fetchData()
         observeViewModel()
-
     }
 
     private func setupViewModel() {
@@ -49,6 +48,7 @@ class ANFExploreCardTableViewController: UITableViewController {
 }
 
 extension ANFExploreCardTableViewController {
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
