@@ -15,6 +15,8 @@ class FeedItemCell: UITableViewCell {
     @IBOutlet var promoMessage: UILabel!
     @IBOutlet var bottomDescription: UILabel!
     @IBOutlet weak var bottomStackView: UIStackView!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonOne: UIButton!
 
     static func nib() -> UINib {
         return UINib(nibName: "FeedItemCell", bundle: nil)
@@ -22,7 +24,12 @@ class FeedItemCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        bottomStackView.backgroundColor = .red
+        buttonOne.isHidden = true
+        buttonTwo.isHidden = true
+        buttonOne.layer.borderColor = UIColor.black.cgColor
+        buttonOne.layer.borderWidth = 1
+        buttonTwo.layer.borderColor = UIColor.black.cgColor
+        buttonTwo.layer.borderWidth = 1
     }
 
 
@@ -38,11 +45,20 @@ class FeedItemCell: UITableViewCell {
         self.bottomDescription.text = data.bottomDescription
 
         if let content = data.content {
-            for item in content {
-                // make a button here and attach it to the stack view
+            for (index,item) in content.enumerated() {
+                if index == 0 {
+                    buttonOne.isHidden = false
+                    buttonTwo.isHidden = true
+                    buttonOne.setTitle(item.title, for: .normal)
+                }
+                else if index == 1 {
+                    buttonTwo.isHidden = false
+                    buttonOne.setTitle(item.title, for: .normal)
+                }
             }
+        } else {
+            buttonOne.isHidden = true
+            buttonTwo.isHidden = true
         }
-        
     }
-    
 }

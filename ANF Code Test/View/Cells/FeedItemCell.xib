@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-nc-jml" userLabel="MiddleStackView">
-                        <rect key="frame" x="0.0" y="338" width="486" height="120"/>
+                        <rect key="frame" x="0.0" y="318" width="486" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Top Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-bU-5d9" userLabel="topDescriptionLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="486" height="69.5"/>
@@ -50,13 +50,31 @@
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-MT-SKh" userLabel="BottomStackView">
-                        <rect key="frame" x="0.0" y="458" width="486" height="50"/>
+                        <rect key="frame" x="0.0" y="438" width="486" height="70"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JC-yk-Lnq">
+                                <rect key="frame" x="0.0" y="0.0" width="486" height="31.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxY-rN-ANn">
+                                <rect key="frame" x="0.0" y="31.5" width="486" height="38.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TaN-d5-eYw" userLabel="height = 50"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="TaN-d5-eYw" userLabel="height = 50"/>
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anf-20160527-app-m-shirts" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3O-Gb-xT2" customClass="ScaledHeightImageView" customModule="ANF_Code_Test" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="486" height="338"/>
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="318"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="8"/>
@@ -82,6 +100,8 @@
                 <outlet property="backgroundImage" destination="I3O-Gb-xT2" id="gMG-pJ-mxm"/>
                 <outlet property="bottomDescription" destination="tRP-O2-MEf" id="Zzs-lT-mGy"/>
                 <outlet property="bottomStackView" destination="SG3-MT-SKh" id="TpT-8D-AZw"/>
+                <outlet property="buttonOne" destination="4JC-yk-Lnq" id="fIv-Bz-p3S"/>
+                <outlet property="buttonTwo" destination="fxY-rN-ANn" id="9Dn-uU-wQ5"/>
                 <outlet property="promoMessage" destination="9X3-A8-Emy" id="q0X-13-qSV"/>
                 <outlet property="title" destination="HuT-OS-hB1" id="WQk-Ka-PKv"/>
                 <outlet property="topDescription" destination="xhh-bU-5d9" id="ADe-YB-gXR"/>
@@ -91,5 +111,8 @@
     </objects>
     <resources>
         <image name="anf-20160527-app-m-shirts" width="1000" height="559"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
